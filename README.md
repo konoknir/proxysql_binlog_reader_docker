@@ -3,13 +3,15 @@
 ## How to BUILD binary container
 > sudo docker build -t proxysql_binlog_reader_dev .
 
-### Run container
+Run container
 > sudo docker run --rm -it --name proxysql-binlog-reader proxysql_binlog_reader_dev /bin/bash
 
-### Copy files (from another shell)
+Copy files (from another shell)
 > sudo docker cp proxysql-binlog-reader:/root/proxysql_mysqlbinlog/proxysql_binlog_reader ./prod/proxysql_binlog_reader
 
 ## How to RUN binary-only container
+Build binary, then
+
 > cd prod
 > sudo docker build -t proxysql_binlog_reader .
 
