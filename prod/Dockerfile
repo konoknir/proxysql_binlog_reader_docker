@@ -10,7 +10,7 @@ RUN yum update -y \
 		"mysql-community-libs-$MYSQL_VERSION-1.el7" \
 	&& yum clean all && rm -rf /var/cache/yum
 
-COPY ./proxysql_binlog_reader /bin/proxysql_binlog_reader
+COPY ./prod/proxysql_binlog_reader /bin/proxysql_binlog_reader
 
 CMD /bin/proxysql_binlog_reader \
   -h "${MYSQL_HOST:-127.0.0.1}" \
