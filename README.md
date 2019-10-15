@@ -13,6 +13,7 @@ Copy files (from another shell)
 Build binary, then
 
 > cd prod
+
 > sudo docker build -t proxysql_binlog_reader .
 
 Available ENV options:
